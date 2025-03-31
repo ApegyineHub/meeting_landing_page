@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.hero-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1rem; /* Add a small gap between the images and text */
+}
+
+.hero-left,
+.hero-right {
+  width: 25%; /* Reduce the width to bring images closer to the text */
+  max-width: 250px;
+}
+
+.hero-content {
+  text-align: center;
+  width: 50%; /* Adjust width to balance the layout */
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.hero-content h1 {
+  margin-bottom: 5px; /* Reduce the space between the two lines */
+  line-height: 1.0; /* Adjust line height if needed */
+}
+
+.hero-content h1,
+.hero-content p {
+  line-height: 1.0; /* Adjust the value as needed */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 0.4; /* Adjust line height if needed */
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+/* General Button Styles */
+.btn {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Hero Section Button (Blue) */
+.hero-download {
+  background-color: #007bff; /* Blue */
+  color: white;
+}
+
+.avatars {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.avatars img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 4rem 2rem; /* Add more space before the features section */
+}
+
+.features h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.features p {
+  margin: 0.5rem 0;
+}
+
+/* Feature Grid for Desktop */
+.feature-grid {
+  display: flex; /* Use Flexbox for horizontal alignment */
+  justify-content: center; /* Center the images horizontally */
+  gap: 1.5rem; /* Add spacing between images */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.feature-item {
+  text-align: center;
+  flex: 1 1 calc(25% - 1.5rem); /* Ensure each item takes up 25% of the row */
+  max-width: 300px; /* Optional: Limit the width of each item */
+}
+
+.feature-item img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.footer {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem;
+  background :url('images/image-footer.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+/* Add a lighter blue color overlay */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5); /* Blue overlay with 30% opacity */
+  z-index: 1;
+}
+
+/* Ensure footer content is above the overlay */
+.footer h3,
+.footer p,
+.footer .footer-btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* Center-align all text */
+.footer h3,
+.footer p {
+  margin: 0.5rem 0;
+  line-height:1.5;
+}
+
+.footer .footer-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-grid {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .avatars img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .feature-item {
+    padding: 0.5rem;
+  }
+}
