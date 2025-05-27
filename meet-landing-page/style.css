@@ -15,10 +15,6 @@ body {
   font-weight: bold;
 }
 
-.main-content {
-  padding: 2rem;
-}
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -126,12 +122,11 @@ body {
   margin: 0.5rem 0;
 }
 
-/* Feature Grid for Desktop */
 .feature-grid {
-  display: flex; /* Use Flexbox for horizontal alignment */
-  justify-content: center; /* Center the images horizontally */
-  gap: 1.5rem; /* Add spacing between images */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  display: flex; /* Default: Flexbox for desktop */
+  justify-content: center; /* Center items horizontally */
+  gap: 1.5rem; /* Spacing between items */
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
 .feature-item {
@@ -222,6 +217,12 @@ body {
 }
 
 @media (max-width: 480px) {
+  .feature-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem; 
+    justify-content: center;
+  }
   .btn {
     padding: 0.5rem;
     font-size: 0.9rem;
