@@ -15,16 +15,13 @@ body {
   font-weight: bold;
 }
 
-.main-content {
-  padding: 2rem;
-}
-
-
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  background-color: #f8f9fa;
 }
 
 .hero-images {
@@ -33,96 +30,42 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  gap: 1rem;
+  gap: 1rem; /* Add a small gap between the images and text */
 }
 
 .hero-left,
 .hero-right {
-  width: 25%;
+  width: 25%; /* Reduce the width to bring images closer to the text */
   max-width: 250px;
 }
 
 .hero-content {
   text-align: center;
-  width: 50%;
-}
-
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 1.5rem;
-  }
-
-  .hero-images {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .hero-left,
-  .hero-right {
-    width: 50%;
-    max-width: 200px;
-  }
-
-  .hero-content {
-    width: 80%;
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 1rem;
-  }
-
-  .hero-images {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .hero-left,
-  .hero-right {
-    width: 70%;
-    max-width: 150px;
-  }
-
-  .hero-content {
-    width: 90%;
-    margin-top: 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
+  width: 50%; /* Adjust width to balance the layout */
+  margin-top: 20px; /* Adjust the value as needed */
 }
 
 .hero-content h1 {
-  margin-bottom: 5px; 
-  line-height: 0.4; 
+  margin-bottom: 5px; /* Reduce the space between the two lines */
+  line-height: 1.0; /* Adjust line height if needed */
 }
 
 .hero-content h1,
 .hero-content p {
-  line-height: 0.4; 
+  line-height: 1.0; /* Adjust the value as needed */
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  line-height: 0.4; 
+  line-height: 0.4; /* Adjust line height if needed */
 }
 
 .buttons {
   margin-top: 1rem;
 }
 
+/* General Button Styles */
 .btn {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
@@ -141,8 +84,9 @@ body {
   color: white;
 }
 
+/* Hero Section Button (Blue) */
 .hero-download {
-  background-color: #007bff; 
+  background-color: #007bff; /* Blue */
   color: white;
 }
 
@@ -158,9 +102,10 @@ body {
   border-radius: 50%;
 }
 
+/* Features Section */
 .features {
   text-align: center;
-  padding: 4rem 2rem; 
+  padding: 4rem 2rem; /* Add more space before the features section */
 }
 
 .features h5 {
@@ -178,16 +123,16 @@ body {
 }
 
 .feature-grid {
-  display: flex; 
-  justify-content: center; 
-  gap: 1.5rem; 
-  flex-wrap: wrap; 
+  display: flex; /* Default: Flexbox for desktop */
+  justify-content: center; /* Center items horizontally */
+  gap: 1.5rem; /* Spacing between items */
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
 .feature-item {
   text-align: center;
-  flex: 1 1 calc(25% - 1.5rem); 
-  max-width: 300px; 
+  flex: 1 1 calc(25% - 1.5rem); /* Ensure each item takes up 25% of the row */
+  max-width: 300px; /* Optional: Limit the width of each item */
 }
 
 .feature-item img {
@@ -210,6 +155,7 @@ body {
   color: white;
 }
 
+/* Add a lighter blue color overlay */
 .footer::before {
   content: '';
   position: absolute;
@@ -217,10 +163,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 255, 0.5); 
+  background-color: rgba(0, 0, 255, 0.5); /* Blue overlay with 30% opacity */
   z-index: 1;
 }
 
+/* Ensure footer content is above the overlay */
 .footer h3,
 .footer p,
 .footer .footer-btn {
@@ -228,6 +175,7 @@ body {
   z-index: 2;
 }
 
+/* Center-align all text */
 .footer h3,
 .footer p {
   margin: 0.5rem 0;
@@ -244,6 +192,7 @@ body {
   cursor: pointer;
 }
 
+/* Media Queries */
 @media (max-width: 1024px) {
   .feature-grid {
     grid-template-columns: 1fr;
@@ -252,7 +201,7 @@ body {
 
 @media (min-width: 1024px) {
   .feature-grid {
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
   }
 }
 
@@ -268,6 +217,12 @@ body {
 }
 
 @media (max-width: 480px) {
+  .feature-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1.5rem; 
+    justify-content: center;
+  }
   .btn {
     padding: 0.5rem;
     font-size: 0.9rem;
